@@ -1,6 +1,6 @@
 ---
 name: setup
-description: Spin up an agent HQ for a solo founder's startup — from an existing codebase, a startup memo, or just an idea. Designs specialist Claude Code agent roles from the code's real areas and the founder's business needs (product, marketing, finance, sales…), always with a PM owning the backlog and an investor-style advisor, each with persistent memory; plus shared CLAUDE.md knowledge, race-free team skills (team-kickoff, goal-complete, knowledge-pass, idea-review), and a tmux launcher. Also adds single roles later. Use whenever someone wants agent teammates, an AI dev or startup team, specialist agents for their app or business, to turn a startup memo into a project, "set up agent teams in this repo", or to add a role, even if they don't say "agent team".
+description: Spin up an agent HQ for a solo founder's startup — from an existing codebase, a startup memo, or just an idea. Designs specialist Claude Code agent roles from the code's real areas and the founder's business needs (product, marketing, finance, sales…), always with a PM owning the backlog and an investor-style advisor, each with persistent memory; plus shared CLAUDE.md knowledge, race-free team skills (team-kickoff, goal-complete, knowledge-pass, idea-review), and a tmux launcher. Also adds single roles later and upgrades existing HQs to the latest shared rules. Use whenever someone wants agent teammates, an AI dev or startup team, specialist agents for their app or business, to turn a startup memo into a project, "set up agent teams in this repo", to add a role, or to upgrade an existing HQ, even if they don't say "agent team".
 ---
 
 # Agent HQ setup
@@ -22,6 +22,7 @@ These behaviours were verified on Claude Code 2.1.280, where agent teams are exp
 ## Modes
 
 - **Full setup** (default): the workflow below.
+- **Upgrade** — the person asks to upgrade or update an existing HQ ("/agent-hq:setup upgrade"), or you're run in a folder that already has `.claude/agent-hq.json` or agent-hq roles and they didn't ask for a specific role: follow `references/upgrade.md`. It updates only the shared parts (team protocol, team skills, the no-races section, launcher, settings) and never touches role-specific rules, memories, workspaces, or docs.
 - **Add a role** — the person asks for one role ("add a finance role", "we have code now, add engineering roles"): skip to step 2 for just that role, write it per step 3, create its workspace or area `CLAUDE.md`, update any list of roles in root `CLAUDE.md` (e.g. the business roles named in "Working as a team") and assign it relevant backlog items if the pm asks, then verify. Don't touch anything else.
 
 ## Workflow
@@ -81,6 +82,7 @@ Adapt each file in `template/`:
 | `docs/backlog.md` | Always: copy and seed from the memo's plans and build list, or the founder's stated priorities. Owned by the pm role. |
 | `.claude/settings.json` | Merge `env.CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS: "1"` and `teammateMode: "auto"`; keep existing keys. |
 | `scripts/team.sh` | Copy and `chmod +x`, unless the project has an equivalent. |
+| `.claude/agent-hq.json` | Write `{"version": "<plugin version from .claude-plugin/plugin.json>"}` so later upgrades know what this HQ has. |
 
 If a role's rules name a project skill that doesn't exist yet (e.g. `db-migrations`), either create it from the procedure you found in step 1 or remove the reference.
 
@@ -92,7 +94,7 @@ If a role's rules name a project skill that doesn't exist yet (e.g. `db-migratio
 - Every path a role owns exists (create empty business workspaces), or is flagged as a placeholder.
 - Business roles' rules forbid publishing, posting, outreach, sign-ups, and moving money, and require sources for factual claims.
 - Read-only roles have no `Write`/`Edit`; no role has both `Bash` and `WebFetch`.
-- `.claude/settings.json` is valid JSON.
+- `.claude/settings.json` and `.claude/agent-hq.json` are valid JSON.
 - No `<placeholder>` remains where you had the real answer.
 - Every backlog item has exactly one owner role (helpers go in the item text).
 - Every workspace `CLAUDE.md` has a "What's here" section.
