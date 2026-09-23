@@ -40,7 +40,7 @@ In your project folder:
 /agent-hq:setup
 ```
 
-You can also just say *"set up an agent team for this project"*. Starting from a startup memo? Put it in an empty folder and say *"start a new project from memo.md with an agent team"*. Add a role later with *"/agent-hq:setup add a <role> role"*. Review the proposed roles, then:
+You can also just say *"set up an agent team for this project"*. Starting from a startup memo? Say *"start a new project from path/to/memo.md with an agent team"*: it creates a `<project>-hq` folder (e.g. `distribution-club-hq`) and sets everything up inside it. Add a role later with *"/agent-hq:setup add a <role> role"*. Review the proposed roles, then:
 
 ```sh
 ./scripts/team.sh                 # open the HQ

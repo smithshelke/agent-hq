@@ -29,7 +29,9 @@ These behaviours were verified on Claude Code 2.1.280, where agent teams are exp
 ### 0. Preflight
 
 Check quietly and only mention problems:
-- **Folder:** if the current folder is the person's home directory or clearly not a project, ask where the project lives (or offer to create a new folder for an idea-stage project).
+- **Folder:**
+  - **Existing project** (the current folder has code or project files): set up the HQ in place; the agents need to work where the code is.
+  - **New project** (starting from a memo or an idea, or the current folder is the home directory, empty, or only holds the memo): create a new folder named `<project-slug>-hq` (lowercase, hyphens, e.g. `distribution-club-hq`), inside the current folder unless it's the home directory, in which case use `~/<project-slug>-hq`. Take the slug from the memo's or product's name. If that folder already exists and isn't empty, ask before using it. Copy the memo into it (see below) and do everything else inside it.
 - **git:** agent teams rely on branches and diffs for review. If the folder isn't a git repo, offer to run `git init` (ask first).
 - **tmux:** needed for split-pane teammates (`command -v tmux`). If missing, say teammates will run inside one Claude window instead and give the install command for their OS (macOS `brew install tmux`, Debian/Ubuntu `sudo apt install tmux`). On Windows without WSL, panes aren't available; in-process mode still works.
 - **Claude Code version:** note `claude --version` for the report.
