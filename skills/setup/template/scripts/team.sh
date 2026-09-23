@@ -16,6 +16,8 @@ fi
 if ! tmux has-session -t "=$name" 2>/dev/null; then
   tmux new-session -d -s "$name" -c "$PWD" claude --remote-control "$name" "$@"
 fi
+# Let Claude Code know when its pane gains or loses focus.
+tmux set-option -g focus-events on
 if [ -n "${TMUX:-}" ]; then
   exec tmux switch-client -t "=$name"
 fi
