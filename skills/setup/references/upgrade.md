@@ -6,7 +6,7 @@ Brings an HQ that an older agent-hq version generated up to date with the curren
 
 | Part | How |
 |---|---|
-| Team protocol in each role: `## How you work on the team` and `## Your memory` | Replace both sections with the current verbatim text from `role-spec.md` (with the role's name filled in). |
+| Team protocol in each role: `## How you work on the team` and `## Your memory` | Apply only the line-level changes the changelog lists (add, or replace the named line). Never replace these sections wholesale: founders add their own lines there (e.g. extra team rules), and those must survive. |
 | `CLAUDE.md` → `## Working as a team (no races)` | Replace that one section with the current template's version. Add it if it's missing. |
 | Team skills in `.claude/skills/` that come from the template | Add missing ones. For existing ones, apply the changes listed in the changelog below, keeping project-specific values (real commands, review role name, extra checks). Never replace one wholesale. |
 | `scripts/team.sh` | Replace with the current template, unless the founder changed it (then show the difference and ask). Remove scripts the changelog retired. |
@@ -32,6 +32,9 @@ Brings an HQ that an older agent-hq version generated up to date with the curren
 ## Changelog of shared parts
 
 Newest first. Each entry has a **marker** to detect whether an HQ already has it.
+
+### 0.7.1
+- Upgrade itself: protocol sections are now edited line by line, never replaced wholesale. No HQ changes.
 
 ### 0.7.0
 - Team protocol: replaces the "When your task is done, report to the lead…" line with the messaging rules (full results in files; ≤5-line reports to the lead; progress in the task list; message peers directly; batch requests to the lead; summarize fanned-out work into one file). Marker: `Keep the lead's context clean`.
