@@ -14,7 +14,8 @@ The team works on **one goal at a time** in a shared checkout. This plan is what
    - its dependencies — tasks that define an interface (API shape, schema, event names, shared types) come first; tasks that use it wait,
    - acceptance criteria.
 4. **Assign shared files.** Manifests, lockfiles, schema, shared types, and config each get one owner for this goal. Do the lead-only steps yourself when asked: package installs, migrations, git operations, dev server.
-5. **Load the task list** with owners, file lists, and dependencies. Spawn only the roles whose tasks are ready or soon ready (usually 2–4, never more than 5). Keep coding teammates to 2–3 in parallel.
-6. **Tell the founder** which teammates are running and what each owns.
-7. **Watch for overlap.** If a teammate needs a file outside its list, decide: reassign it, sequence it after the current owner, or message the owner.
-8. **Finish** with the `goal-complete` skill. Keep teammates alive until the founder says to shut down; before shutdown, run `knowledge-pass` (you run it, or delegate to a planning role if one is running), then shut teammates down and clean up the team.
+5. **Strategic goals get the advisor.** If the goal changes direction, pricing, market, positioning, or tests a key assumption, and the team has an advisor role, spawn it first: it reviews the plan before work starts and the result at `goal-complete`. The founder talks to it directly in its pane.
+6. **Load the task list** with owners, file lists, and dependencies. Spawn only the roles whose tasks are ready or soon ready (usually 2–4, never more than 5). Keep coding teammates to 2–3 in parallel.
+7. **Tell the founder** which teammates are running and what each owns.
+8. **Watch for overlap.** If a teammate needs a file outside its list, decide: reassign it, sequence it after the current owner, or message the owner.
+9. **Finish** with the `goal-complete` skill. Keep teammates alive until the founder says to shut down; before shutdown, run `knowledge-pass` (you run it, or delegate to a planning role if one is running), then shut teammates down and clean up the team.

@@ -9,7 +9,7 @@ One command looks at your project (code or just an idea), asks you a few questio
 - **Shared knowledge** every agent reads: product, brand, decisions, and gotchas per area.
 - **Team workflows** as skills: `team-kickoff`, `goal-complete`, `knowledge-pass`, `knowledge-review` (monthly, run by the PM), `release-checklist`, `idea-review`.
 - **Race-free teamwork**: one goal at a time, each task limited to its own files, and git, installs and migrations run only by the lead.
-- **Launchers**: `scripts/team.sh` opens the HQ in tmux (teammates appear as panes) and `scripts/advisor.sh` gives you a one-on-one with the advisor.
+- **Launcher**: `scripts/team.sh` opens the HQ in tmux; teammates, including the advisor, appear as panes you can talk to directly.
 
 ## Requirements
 
@@ -48,8 +48,7 @@ You can also just say *"set up an agent team for this project"*. Starting from a
 > ...
 > Run the knowledge pass, then shut down the team.
 
-./scripts/advisor.sh              # one-on-one with the advisor
-> Review my pricing idea
+> Spawn the advisor to review my pricing idea   # then chat in its pane
 ```
 
 Nothing is committed. Review every change with `git diff`.

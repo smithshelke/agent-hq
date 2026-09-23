@@ -1,6 +1,6 @@
 ---
 name: setup
-description: Spin up an agent HQ for a solo founder's startup — from an existing codebase, a startup memo, or just an idea. Designs specialist Claude Code agent roles from the code's real areas and the founder's business needs (product, marketing, finance, sales…), always with a PM owning the backlog and an investor-style advisor, each with persistent memory; plus shared CLAUDE.md knowledge, race-free team skills (team-kickoff, goal-complete, knowledge-pass, idea-review), and tmux launchers. Also adds single roles later. Use whenever someone wants agent teammates, an AI dev or startup team, specialist agents for their app or business, to turn a startup memo into a project, "set up agent teams in this repo", or to add a role, even if they don't say "agent team".
+description: Spin up an agent HQ for a solo founder's startup — from an existing codebase, a startup memo, or just an idea. Designs specialist Claude Code agent roles from the code's real areas and the founder's business needs (product, marketing, finance, sales…), always with a PM owning the backlog and an investor-style advisor, each with persistent memory; plus shared CLAUDE.md knowledge, race-free team skills (team-kickoff, goal-complete, knowledge-pass, idea-review), and a tmux launcher. Also adds single roles later. Use whenever someone wants agent teammates, an AI dev or startup team, specialist agents for their app or business, to turn a startup memo into a project, "set up agent teams in this repo", or to add a role, even if they don't say "agent team".
 ---
 
 # Agent HQ setup
@@ -79,7 +79,6 @@ Adapt each file in `template/`:
 | `docs/backlog.md` | Always: copy and seed from the memo's plans and build list, or the founder's stated priorities. Owned by the pm role. |
 | `.claude/settings.json` | Merge `env.CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS: "1"` and `teammateMode: "auto"`; keep existing keys. |
 | `scripts/team.sh` | Copy and `chmod +x`, unless the project has an equivalent. |
-| `scripts/advisor.sh` | Copy and `chmod +x` if the team has an advisor role (rename the agent in it if the role has another name). |
 
 If a role's rules name a project skill that doesn't exist yet (e.g. `db-migrations`), either create it from the procedure you found in step 1 or remove the reference.
 
@@ -107,7 +106,7 @@ Short:
   - `./scripts/team.sh` opens the HQ (tmux session + Claude). Teammates appear as panes when a team starts.
   - *"Use team-kickoff to build <goal>"* starts a team. The team works one goal at a time; each closes with `goal-complete`.
   - *"Run the knowledge pass, then shut down the team."* ends it.
-- **Idea stage or new memo:** recommend the first step is an advisor review of the memo (`./scripts/advisor.sh` → *"Validate the idea in docs/memo.md"*) before building.
+- **Idea stage or new memo:** recommend the first step is an advisor review of the memo before building: in the HQ, *"Spawn the advisor and have it validate the idea in docs/memo.md"*, then answer its questions in its pane.
 - "Add later" roles and when to add them (*"/agent-hq:setup add a <role> role"*).
-- If there's an advisor: talk to it one-on-one with `./scripts/advisor.sh` (e.g. *"Review my pricing idea"*); it also joins teams like any role.
+- The advisor is a teammate like the others: spawn it any time (*"Spawn the advisor to review my pricing idea"*) and talk to it in its pane. The lead also brings it in for strategic goals.
 - Nothing is committed; review with `git diff`.
