@@ -1,0 +1,14 @@
+{
+  "name": "agent-hq",
+  "owner": {
+    "name": "smithshelke"
+  },
+  "plugins": [
+    {
+      "name": "agent-hq",
+      "source": "./",
+      "description": "Spin up an agent HQ for a solo founder's project."
+    }
+  ],
+  "description": "Agent HQ: specialist Claude Code agent teams for solo founders."
+}
