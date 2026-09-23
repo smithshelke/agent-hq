@@ -36,6 +36,7 @@ Check quietly and only mention problems:
 - **git:** agent teams rely on branches and diffs for review. If the folder isn't a git repo, offer to run `git init` (ask first).
 - **tmux:** needed for split-pane teammates (`command -v tmux`). If missing, say teammates will run inside one Claude window instead and give the install command for their OS (macOS `brew install tmux`, Debian/Ubuntu `sudo apt install tmux`). On Windows without WSL, panes aren't available; in-process mode still works.
 - **Claude Code version:** note `claude --version` for the report.
+- **Remote Control (on by default for every agent):** `team.sh` starts the lead with `--remote-control <hq-name>`. Teammates are separate Claude sessions, and Claude Code only lets Remote Control start automatically from the person's *user* settings (project settings can't enable it). Check `remoteControlAtStartup` in `~/.claude/settings.json`; if it isn't `true`, recommend setting it and offer to add it (ask first; it applies to all their Claude sessions).
 - **Memo or brief:** if the person points to a startup memo, pitch, or brief (a file path, or pasted text), read it fully. Copy it into the project as `docs/memo.md` (keep the original's filename in a first-line note) and treat it as the primary source for product, customer, pricing, stage, plans, and open questions. Never edit the original.
 
 ### 1. Inspect the project
@@ -109,7 +110,7 @@ Short:
 - Placeholders the founder still needs to fill.
 - **Restart first:** agent teams only turn on when Claude starts, and this session started before `.claude/settings.json` existed. Tell the founder to exit this session and open the HQ with `./scripts/team.sh` before spawning any teammate; otherwise roles run as plain subagents with no panes.
 - How to start (one line each, for someone new):
-  - `./scripts/team.sh` opens the HQ (tmux session + Claude). Teammates appear as panes when a team starts.
+  - `./scripts/team.sh` opens the HQ (tmux session + Claude) with Remote Control on, so the lead can be driven from claude.ai or the Claude app. Teammates appear as panes when a team starts, and get Remote Control too when `remoteControlAtStartup` is on.
   - *"Use team-kickoff to build <goal>"* starts a team. The team works one goal at a time; each closes with `goal-complete`.
   - *"Run the knowledge pass, then shut down the team."* ends it.
 - **Idea stage or new memo:** recommend the first step is an advisor review of the memo before building: in the HQ, *"Spawn the advisor and have it validate the idea in docs/memo.md"*, then answer its questions in its pane.

@@ -7,14 +7,14 @@ cd "$(dirname "$0")/.."
 if ! command -v claude >/dev/null 2>&1; then
   echo "Claude Code isn't installed. See https://code.claude.com/docs" >&2; exit 1
 fi
+# Session name: the folder name. tmux rewrites '.' and ':' in session names, and '.'/':' in a -t target mean window/pane.
+name="$(basename "$PWD" | tr '.:' '__')"
 if ! command -v tmux >/dev/null 2>&1; then
   echo "tmux not found — running teammates in-process. Install tmux for split panes (macOS: brew install tmux)." >&2
-  exec claude --teammate-mode in-process "$@"
+  exec claude --teammate-mode in-process --remote-control "$name" "$@"
 fi
-# tmux rewrites '.' and ':' in session names, and '.'/':' in a -t target mean window/pane.
-name="$(basename "$PWD" | tr '.:' '__')"
 if ! tmux has-session -t "=$name" 2>/dev/null; then
-  tmux new-session -d -s "$name" -c "$PWD" claude "$@"
+  tmux new-session -d -s "$name" -c "$PWD" claude --remote-control "$name" "$@"
 fi
 if [ -n "${TMUX:-}" ]; then
   exec tmux switch-client -t "=$name"

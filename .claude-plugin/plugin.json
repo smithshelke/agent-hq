@@ -1,6 +1,6 @@
 {
   "name": "agent-hq",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Spin up an agent HQ for a solo founder's project: a team of specialist Claude Code agents (engineering, business, advisor) designed from your codebase and goals, with per-role memory, shared knowledge, and race-free team workflows.",
   "keywords": [
     "agent-teams",

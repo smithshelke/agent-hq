@@ -10,13 +10,17 @@ One command looks at your project (code or just an idea), asks you a few questio
 - **Team workflows** as skills: `team-kickoff`, `goal-complete`, `knowledge-pass`, `knowledge-review` (monthly, run by the PM), `release-checklist`, `idea-review`.
 - **No AI-slop UI**: every role that builds UI loads the most specific [UI Skills](https://github.com/ibelick/ui-skills) (`npx ui-skills`) before starting and must follow them strictly, reviewing its output against them before reporting.
 - **Race-free teamwork**: one goal at a time, each task limited to its own files, and git, installs and migrations run only by the lead.
-- **Launcher**: `scripts/team.sh` opens the HQ in tmux; teammates, including the advisor, appear as panes you can talk to directly.
+- **Launcher**: `scripts/team.sh` opens the HQ in tmux with Remote Control on (drive it from claude.ai or the Claude app); teammates, including the advisor, appear as panes you can talk to directly.
 
 ## Requirements
 
 - [Claude Code](https://code.claude.com/docs). Built and tested on 2.1.280, where agent teams are experimental.
 - git
 - tmux for split-pane teammates (optional: without it, teammates run inside one Claude window).
+
+## Remote Control for every agent
+
+Claude Code only turns on Remote Control automatically from your user settings, so for teammates to get it too, add `"remoteControlAtStartup": true` to `~/.claude/settings.json` (or run `/config`). The setup offers to do this for you.
 
 ## Install
 

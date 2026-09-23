@@ -33,6 +33,10 @@ Brings an HQ that an older agent-hq version generated up to date with the curren
 
 Newest first. Each entry has a **marker** to detect whether an HQ already has it.
 
+### 0.10.0
+- `scripts/team.sh`: starts the lead with `--remote-control <hq-name>` (replace per the team.sh rule above). Marker: `--remote-control` in team.sh.
+- Report: if `remoteControlAtStartup` isn't `true` in the founder's user settings, recommend it so teammates get Remote Control too (never set it without asking).
+
 ### 0.9.0
 - New HQs default every role to `opus`. Upgrade does **not** change existing roles' models (frontmatter is never touched); mention it in the report so the founder can ask to switch them.
 
