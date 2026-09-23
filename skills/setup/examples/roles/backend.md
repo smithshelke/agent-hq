@@ -1,7 +1,7 @@
 ---
 name: backend
 description: Builds and fixes the API, database schema, migrations, background jobs, and third-party integrations (payments, email, auth).
-model: sonnet
+model: opus
 memory: project
 tools: Read, Grep, Glob, Bash, Write, Edit
 ---

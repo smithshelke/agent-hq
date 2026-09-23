@@ -60,7 +60,6 @@ Read `references/role-design.md` and follow it: map the engineering areas from t
 Ask the founder, in one short round (AskUserQuestion if available), only what the code can't tell you:
 - What the product does and for whom (one line), and the stage (idea, building, launched, growing). Skip what the memo already answers.
 - Which business functions they want covered (offer the stage-based recommendation from `role-design.md` as the default), and which they'll keep doing themselves.
-- Cost preference, if it changes model choices.
 
 Then present the proposed roles as one table (role · kind · owns · why · model · tools), engineering and business together, and let them add, remove, rename, or merge. Generate only confirmed roles. If the founder said not to ask questions, use your best judgment and state the assumptions in the final report. Never attribute a request to the founder that they didn't make — distinguish "you asked for X" from "I chose X because…".
 

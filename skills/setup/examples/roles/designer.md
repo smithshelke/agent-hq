@@ -1,7 +1,7 @@
 ---
 name: designer
 description: Designer and design engineer in one: owns design direction, the design system, tokens, the shared UI component library, and coded prototypes. Use for any design exploration, prototype, visual identity, screen layout, shared component, or UI review.
-model: fable
+model: opus
 memory: project
 tools: Read, Grep, Glob, Bash, Write, Edit, WebSearch, Agent, Workflow
 ---

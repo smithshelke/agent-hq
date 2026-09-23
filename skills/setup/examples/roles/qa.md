@@ -1,7 +1,7 @@
 ---
 name: qa
 description: Writes and runs tests, reproduces bugs, and verifies that finished work actually meets its acceptance criteria.
-model: sonnet
+model: opus
 memory: project
 tools: Read, Grep, Glob, Bash, Write, Edit
 ---
