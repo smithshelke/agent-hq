@@ -81,6 +81,7 @@ Adapt each file in `template/`:
 | `docs/*` | Fill product.md from the memo and the founder's answers (keep it short and point to `docs/memo.md` for detail); leave unknown fields as `<placeholders>`. Turn a memo's plans, build list, and open questions into initial backlog items. |
 | `docs/backlog.md` | Always: copy and seed from the memo's plans and build list, or the founder's stated priorities. Owned by the pm role. |
 | `.claude/settings.json` | Merge `env.CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS: "1"` and `teammateMode: "auto"`; keep existing keys. |
+| `.claude/skills/ui-skills/SKILL.md` | If any role produces UI: run `npx -y ui-skills start` and save its output there (the UI Skills routing skill, MIT, by ibelick). If that fails, copy `template/.claude/skills/ui-skills/SKILL.md` (a stub that points to the CLI). |
 | `scripts/team.sh` | Copy and `chmod +x`, unless the project has an equivalent. |
 | `.claude/agent-hq.json` | Write `{"version": "<plugin version from .claude-plugin/plugin.json>"}` so later upgrades know what this HQ has. |
 
@@ -94,6 +95,7 @@ If a role's rules name a project skill that doesn't exist yet (e.g. `db-migratio
 - Every path a role owns exists (create empty business workspaces), or is flagged as a placeholder.
 - Business roles' rules forbid publishing, posting, outreach, sign-ups, and moving money, and require sources for factual claims.
 - Read-only roles have no `Write`/`Edit`; no role has both `Bash` and `WebFetch`.
+- Every UI-producing role has the UI Skills rule verbatim and `Bash` in its tools (to run `npx ui-skills`), and `.claude/skills/ui-skills/SKILL.md` exists.
 - `.claude/settings.json` and `.claude/agent-hq.json` are valid JSON.
 - No `<placeholder>` remains where you had the real answer.
 - Every backlog item has exactly one owner role (helpers go in the item text).

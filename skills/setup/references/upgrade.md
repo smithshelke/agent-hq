@@ -33,6 +33,10 @@ Brings an HQ that an older agent-hq version generated up to date with the curren
 
 Newest first. Each entry has a **marker** to detect whether an HQ already has it.
 
+### 0.8.0
+- New project skill `.claude/skills/ui-skills/SKILL.md` if any role produces UI (save the output of `npx -y ui-skills start`; fall back to the template stub). Marker: the file exists.
+- UI-producing roles (design, frontend, web, mobile, landing pages): add the UI Skills rule from `role-spec.md` verbatim to the role's `## Rules` (the second exception to "never touch role sections"), replacing any older, softer ui-skills line; add `Bash` to its tools if missing. Marker: `UI work follows UI Skills strictly`.
+
 ### 0.7.1
 - Upgrade itself: protocol sections are now edited line by line, never replaced wholesale. No HQ changes.
 

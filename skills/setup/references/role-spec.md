@@ -20,7 +20,7 @@ Don't add `skills:` — it's ignored when teammates run in tmux panes. Name skil
 
 1. **Identity** — one line: "You are the <role>." Add one clarifying line if the boundary isn't obvious ("You own the plan, not the implementation." / "You are read-only: you report, others fix.").
 2. **`## You own`** — real paths and the responsibility attached. For engineering roles: code paths, plus any interface others depend on (API contracts, event names, shared components). For business roles: their `business/<function>/` workspace and the deliverables they produce there.
-3. **`## Rules`** (or `## How you work` / `## You check` for review roles) — 3–6 bullets specific to this project. Engineering: its generated paths, migration command, payment provider, deploy constraints. Business: the founder's constraints (budget, channels they own themselves, tone), what to read first (`docs/product.md`, the function's `CLAUDE.md`), how to cite sources, and handoffs to other roles. Point to the area `CLAUDE.md` to read first. Name any project skills this role should use ("For migrations, use the `db-migrations` skill.").
+3. **`## Rules`** (or `## How you work` / `## You check` for review roles) — 3–6 bullets specific to this project. Engineering: its generated paths, migration command, payment provider, deploy constraints. Business: the founder's constraints (budget, channels they own themselves, tone), what to read first (`docs/product.md`, the function's `CLAUDE.md`), how to cite sources, and handoffs to other roles. Point to the area `CLAUDE.md` to read first. Name any project skills this role should use ("For migrations, use the `db-migrations` skill."). **Every role that produces UI** (design, frontend, web, mobile, landing pages) gets the UI Skills rule below in its Rules, verbatim.
 4. **`## You don't`** (optional) — boundaries that aren't implied by ownership.
 5. **`## How you work on the team`** — copy verbatim from below.
 6. **`## Your memory`** — copy verbatim from below, replacing `<role>` with the role name.
@@ -65,6 +65,12 @@ For each role also create `.claude/agent-memory/<role>/MEMORY.md`:
 # <role> memory
 
 <!-- Lessons about doing this role well. One line each. Trim when it passes ~60 lines. -->
+```
+
+## UI Skills rule — copy verbatim into every UI-producing role's Rules
+
+```markdown
+- **UI work follows UI Skills strictly (no AI slop).** Before any UI task (screens, components, prototypes, landing pages, motion, visual polish), follow the `ui-skills` project skill: run `npx ui-skills categories`, `npx ui-skills list --category <category>`, and `npx ui-skills get <slug>` to load the 1–3 most specific skills (you may run these yourself; they print skills and install nothing). Treat every rule in the loaded skills as a hard requirement, not a suggestion. Before reporting, review your output against each loaded skill line by line and fix every violation; list the skills you used in your report. When you fan UI work out to agents, include the loaded skill text in every brief and review each result against it.
 ```
 
 ## Safety rules every role inherits

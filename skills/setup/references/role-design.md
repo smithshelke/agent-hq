@@ -23,6 +23,7 @@ Collect evidence, then group it into areas: each area is a slice of work with it
 | Notebooks, training code, embeddings, vector DB, prompts, evals | ML / AI features |
 | dbt, warehouse, analytics SQL, event tracking | data & analytics |
 | Design tokens, component library, Storybook | design system |
+| Any UI to build (web app, landing pages, mobile) with no designer yet | recommend a `designer` role that owns design direction, tokens, components, and prototypes (see `examples/roles/designer.md`) |
 | Public docs site, API reference, SDKs | docs / developer experience |
 | Browser extension, CLI, desktop app | its own surface |
 
