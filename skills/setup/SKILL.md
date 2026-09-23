@@ -104,6 +104,7 @@ Short:
 - The roles table as generated, and any assumptions you made.
 - Files created vs. merged.
 - Placeholders the founder still needs to fill.
+- **Restart first:** agent teams only turn on when Claude starts, and this session started before `.claude/settings.json` existed. Tell the founder to exit this session and open the HQ with `./scripts/team.sh` before spawning any teammate; otherwise roles run as plain subagents with no panes.
 - How to start (one line each, for someone new):
   - `./scripts/team.sh` opens the HQ (tmux session + Claude). Teammates appear as panes when a team starts.
   - *"Use team-kickoff to build <goal>"* starts a team. The team works one goal at a time; each closes with `goal-complete`.
