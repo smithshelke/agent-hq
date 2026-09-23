@@ -87,7 +87,7 @@ If a role's rules name a project skill that doesn't exist yet (e.g. `db-migratio
 ### 5. Verify
 
 - Each `.claude/agents/*.md` and `SKILL.md` has parseable frontmatter with `name` and `description`; role names are unique and match filenames.
-- Every role contains both verbatim sections from the spec.
+- Every role contains both verbatim sections from the spec. (including the no-assumptions rule)
 - Root `CLAUDE.md` contains the "Working as a team (no races)" section.
 - Every path a role owns exists (create empty business workspaces), or is flagged as a placeholder.
 - Business roles' rules forbid publishing, posting, outreach, sign-ups, and moving money, and require sources for factual claims.
