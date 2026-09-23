@@ -33,6 +33,9 @@ Brings an HQ that an older agent-hq version generated up to date with the curren
 
 Newest first. Each entry has a **marker** to detect whether an HQ already has it.
 
+### 0.7.0
+- Team protocol: replaces the "When your task is done, report to the lead…" line with the messaging rules (full results in files; ≤5-line reports to the lead; progress in the task list; message peers directly; batch requests to the lead; summarize fanned-out work into one file). Marker: `Keep the lead's context clean`.
+
 ### 0.6.0
 - Adds `.claude/agent-hq.json` (`{"version": "<current>"}`). Marker: the file exists.
 
