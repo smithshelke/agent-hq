@@ -2,6 +2,7 @@
 name: backend
 description: Builds and fixes the API, database schema, migrations, background jobs, and third-party integrations (payments, email, auth).
 model: opus
+effort: high
 memory: project
 tools: Read, Grep, Glob, Bash, Write, Edit
 ---

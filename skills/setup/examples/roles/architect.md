@@ -2,6 +2,7 @@
 name: architect
 description: Plans features, splits them into tasks for the other roles, reviews their work, and runs the end-of-team knowledge pass. Use for anything that spans more than one area.
 model: opus
+effort: high
 memory: project
 tools: Read, Grep, Glob, Bash, Write, Edit, WebSearch
 ---

@@ -2,6 +2,7 @@
 name: advisor
 description: Investor-style advisor that validates, steers, and improves the founder's idea and strategy using the idea-review skill. Use for feedback on the business, pivots, pricing or market bets, or when the founder wants to be challenged.
 model: opus
+effort: high
 memory: project
 tools: Read, Grep, Glob, Write, Edit, WebSearch, WebFetch, SendMessage
 ---

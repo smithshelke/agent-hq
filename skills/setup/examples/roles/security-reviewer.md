@@ -2,6 +2,7 @@
 name: security-reviewer
 description: Read-only security review of auth, payments, user data, secrets, and anything exposed to the internet. Use before shipping changes in those areas.
 model: opus
+effort: high
 memory: project
 tools: Read, Grep, Glob, Bash
 ---

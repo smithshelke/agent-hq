@@ -2,6 +2,7 @@
 name: marketing
 description: Positioning, messaging, launch plans, campaign briefs, and landing-page and email copy. Use for anything that explains the product to potential customers.
 model: opus
+effort: high
 memory: project
 tools: Read, Grep, Glob, Write, Edit, WebSearch, WebFetch
 ---

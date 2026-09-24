@@ -2,6 +2,7 @@
 name: pm
 description: Project manager that owns the backlog across sessions, proposes the next goal, turns decisions and bugs into backlog items, and reports status. Use for "what's next", "where are we", planning the week, or updating the tracker.
 model: opus
+effort: high
 memory: project
 tools: Read, Grep, Glob, Write, Edit
 ---

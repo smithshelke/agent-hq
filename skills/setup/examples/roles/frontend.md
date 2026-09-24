@@ -2,6 +2,7 @@
 name: frontend
 description: Builds and fixes the web app: pages, components, forms, client state, and API integration on the client side.
 model: opus
+effort: high
 memory: project
 tools: Read, Grep, Glob, Bash, Write, Edit
 ---

@@ -33,6 +33,9 @@ Brings an HQ that an older agent-hq version generated up to date with the curren
 
 Newest first. Each entry has a **marker** to detect whether an HQ already has it.
 
+### 0.11.0
+- New HQs set `effort: high` on every role. Upgrade does **not** add it to existing roles (frontmatter is never touched); mention it in the report so the founder can ask.
+
 ### 0.10.1
 - `scripts/team.sh`: turns on tmux `focus-events` so Claude Code knows when its pane is focused. Marker: `focus-events` in team.sh.
 

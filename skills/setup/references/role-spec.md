@@ -9,6 +9,7 @@ Every role is `.claude/agents/<name>.md`. The scope and rules are written fresh 
 name: <kebab-case, unique, matches the filename>
 description: <one or two sentences: what this role does and when the lead should use it. The lead picks roles by this text, so name the concrete areas and tasks.>
 model: opus  # always, unless the founder explicitly asks otherwise
+effort: high  # always, unless the founder explicitly asks otherwise
 memory: project
 tools: <comma-separated; see role-design.md>
 ---

@@ -2,6 +2,7 @@
 name: finance
 description: Runway and burn models, pricing math, unit economics, revenue metrics, and budgets. Use for any question about money, pricing changes, or financial planning.
 model: opus
+effort: high
 memory: project
 tools: Read, Grep, Glob, Bash, Write, Edit, WebSearch
 ---

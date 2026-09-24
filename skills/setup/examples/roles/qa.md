@@ -2,6 +2,7 @@
 name: qa
 description: Writes and runs tests, reproduces bugs, and verifies that finished work actually meets its acceptance criteria.
 model: opus
+effort: high
 memory: project
 tools: Read, Grep, Glob, Bash, Write, Edit
 ---

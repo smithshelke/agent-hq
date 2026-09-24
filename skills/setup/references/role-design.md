@@ -82,7 +82,7 @@ The founder's direction wins: if they name a function, include it even if the st
 ## 4. Pick tools and model per role
 
 - **Tools:** builders get `Read, Grep, Glob, Bash, Write, Edit`. Reviewers get no `Write`/`Edit`. Research-heavy roles (marketing, business-planner, sales, legal-research) get `Read, Grep, Glob, Write, Edit, WebSearch, WebFetch` and no `Bash`. Roles that model numbers (finance) also get `Bash` so they can compute with scripts instead of doing math in their head — but then drop `WebFetch` and keep only `WebSearch`: a role that can both read arbitrary web pages and run commands is the easiest one for injected page content to steer into executing something. Apply the same rule to any role that needs both.
-- **Model:** every role uses `opus` (the strongest Claude model). Only use another model if the founder explicitly asks for it for a specific role.
+- **Model and effort:** every role uses `opus` (the strongest Claude model) at `effort: high`. Only change either if the founder explicitly asks for it for a specific role.
 
 ## 5. Present the proposal
 
